@@ -1,12 +1,15 @@
 {
-  "name": "add-demo-npm",
-  "version": "0.1.1",
-  "description": "A demo npm package to compliment a Medium how-to article.",
-  "main": "./dist/add-demo-npm.js",
+  "name": "nxsapi",
+  "version": "0.1.0",
+  "description": "Nexus API Definition",
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "ts-mocha tests/**/*.test.ts",
-    "coverage": "nyc npm test",
+    "test": "jest --coverage",
+    "prepare": "npm run build",
+    "prep": "npm pack",
+    "publish": "npm publish",
     "lint": "eslint \"**\\*.ts\""
   },
   "files": [
@@ -16,29 +19,30 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ClydeDz/add-demo-npm.git"
+    "url": "git+https://github.com/Cybermage83/NXSapi"
   },
   "keywords": [
     "demo npm",
     "add",
     "calculate"
   ],
-  "author": "Clyde D'Souza",
+  "author": "Ajion",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ClydeDz/add-demo-npm/issues"
+    "url": "https://github.com/Cybermage83/NXSapi/issues"
   },
-  "homepage": "https://github.com/ClydeDz/add-demo-npm#readme",
+  "homepage": "https://github.com/Cybermage83/NXSapi#readme",
   "devDependencies": {
-    "@types/chai": "^4.2.14",
-    "@types/mocha": "^8.2.0",
-    "@typescript-eslint/eslint-plugin": "^4.13.0",
-    "@typescript-eslint/parser": "^4.13.0",
-    "chai": "^4.2.0",
-    "eslint": "^7.17.0",
-    "mocha": "^8.2.1",
-    "nyc": "^15.1.0",
-    "ts-mocha": "^8.0.0",
-    "typescript": "^4.1.3"
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "codecov": "^3.8.2",
+    "eslint": "^7.27.0",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }

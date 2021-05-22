@@ -1,14 +1,17 @@
 {
-    "compilerOptions": { 
-      "target": "es6", 
-      "module": "commonjs",
-      "strict": true, 
-      "declaration": true,
-      "outDir": "./dist"
-    },
-    "exclude": [
-        "tests",
-        "dist",
-        "node_modules"
-    ]
-  }
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "types": ["node", "jest"]
+  },
+  "exclude": ["typings", "tests", "dist", "node_modules"]
+}
